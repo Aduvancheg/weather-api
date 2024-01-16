@@ -1,5 +1,5 @@
 import argparse
-from framework import Requests
+from api_request_pars_json import Requests
 
 
 def read_user_cli_input():
@@ -8,17 +8,13 @@ def read_user_cli_input():
     parser = argparse.ArgumentParser(
         description="Get the current or forecasted weather for a specific city"
     )
-
-    parser.add_argument(
-        "forecast",
-        type=str,
-        help="Current weather or future, this option can be one of them: weather or forecast",
-    )
     parser.add_argument("city", type=str, help="Name of the city")
+    parser.add_argument("language", type=str, help="Type of language")
     args = parser.parse_args()
-    forecast = args.forecast
     city = args.city
-    Requests.get_Weather(forecast, city)
+    language = args.language
+
+    Requests.get_openwather(city, language)
 
 
 if __name__ == "__main__":

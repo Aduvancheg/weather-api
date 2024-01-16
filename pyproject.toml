@@ -12,6 +12,9 @@ dependencies = [
     "pyowm>=3.3.0",
     "setuptools>=58.5.3",
     "pre-commit>=3.6.0",
+    "style>=1.1.6",
+    "datetime>=5.4",
+    "faker>=22.2.0",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
