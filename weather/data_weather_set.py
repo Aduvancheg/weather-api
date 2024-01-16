@@ -414,6 +414,7 @@ class WeatherData:
 
     @classmethod
     def get_weather_group(cls, target_id):
+        """Returns weather icon"""
         for group in [
             cls.thunderstorm_group2,
             cls.drizzle_group3,
@@ -430,5 +431,6 @@ class WeatherData:
 
     @classmethod
     def get_celsius(cls, tem_kelvin) -> float:
+        """Returns temperature in celsius"""
         temperature = tem_kelvin - cls.kelvin_constant
         return temperature

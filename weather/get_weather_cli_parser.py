@@ -3,7 +3,7 @@ from api_request_pars_json import Requests
 
 
 def read_user_cli_input():
-    """Read user cli input"""
+    """Read user cli input, invoke function with cli arguments"""
 
     parser = argparse.ArgumentParser(
         description="Get the current or forecasted weather for a specific city"

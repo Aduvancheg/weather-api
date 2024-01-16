@@ -15,12 +15,8 @@ class Message:
     WHITE = "\033[37m"
 
     @classmethod
-    def display_text_with_padding(cls, text):
-        padded_text = " " * cls.PADDING + text + " " * cls.PADDING
-        print(padded_text)
-
-    @classmethod
     def date(self):
+        """Return current date and time"""
         date_time = datetime.now()
         now = date_time.strftime("%d/%m/%Y %H:%M")
         return now
@@ -39,6 +35,7 @@ class Message:
         wind_speed,
         humidity,
     ):
+        """Returns message composition about weather"""
         today = cls.date()
 
         return (

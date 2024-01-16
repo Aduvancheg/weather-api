@@ -12,10 +12,12 @@ class Requests:
 
     @classmethod
     def end_point(cls, city):
+        """Returns formatted url"""
         return f"{cls.url}/data/2.5/weather?q={city}&appid={cls.api_key}"
 
     @classmethod
     def get_openwather(cls, city, language):
+        """Makes an api request to openweather, displays a weather message to the console"""
         endpoint = cls.end_point(city)
         params = {
             "q": city,
